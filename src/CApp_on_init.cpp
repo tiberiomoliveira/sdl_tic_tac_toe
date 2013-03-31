@@ -16,11 +16,23 @@ bool CApp::on_init() {
   if ((surf_x = CSurface::on_load("./sprites/x.bmp")) == NULL)
     return false;
 
+  if ((surf_x_won = CSurface::on_load("./sprites/x_won.bmp")) == NULL)
+    return false;
+
   if ((surf_o = CSurface::on_load("./sprites/o.bmp")) == NULL)
     return false;
 
+  if ((surf_o_won = CSurface::on_load("./sprites/o_won.bmp")) == NULL)
+    return false;
+
+  if ((surf_draw = CSurface::on_load("./sprites/draw.bmp")) == NULL)
+    return false;
+
   CSurface::transparent(surf_x, 255, 0, 255);
+  CSurface::transparent(surf_x_won, 255, 0, 255);
   CSurface::transparent(surf_o, 255, 0, 255);
+  CSurface::transparent(surf_o_won, 255, 0, 255);
+  CSurface::transparent(surf_draw, 255, 0, 255);
 
   reset();
 
